@@ -1,0 +1,76 @@
+{
+  "title": {
+    "en": "Current Temperature (celsius)",
+    "ja": "現在の気温 (摂氏)"
+  },
+  "version": "1.0.0",
+  "sdkVersion": "1.0.0",
+  "deviceId": "none",
+  "vendorId": "none",
+  "description": {
+    "en": "Current temperature in the setting area",
+    "ja": "指定した地域の現在の気温を取得します。うまく取得できなかった場合は値が -1 となります。"
+  },
+  "blockType": "service",
+  "executor": "RBCCommonWebServiceExecutor",
+  "serviceProxy" : {
+    "service": "pieceCore_Sample"
+  },
+  "preferences": {
+    "type": "object",
+    "properties": {
+      "cityName": {
+        "type": "string",
+        "enum": [
+          "Sapporo-shi",
+          "Tokyo",
+          "Osaka",
+          "Fukuoka-ken",
+          "Okinawa-ken"
+        ],
+        "default": "Tokyo",
+        "x-input-type": "drumroll",
+        "x-title": {
+          "ja": "地域",
+          "en": "Area setting"
+        },
+        "x-description": {
+          "en": "set the area from which to get the temperature.",
+          "ja": "気温を取得する地域を指定します。"
+        },
+        "x-enum-titles": {
+          "Sapporo-shi": {
+            "ja": "札幌市",
+            "en": "Sapporo"
+          },
+          "Tokyo": {
+            "ja": "東京都",
+            "en": "Tokyo"
+          },
+          "Osaka": {
+            "ja": "大阪府",
+            "en": "Osaka"
+          },
+          "Fukuoka-ken": {
+            "ja": "福岡県",
+            "en": "Fukuoka"
+          },
+          "Okinawa-ken": {
+            "ja": "沖縄県",
+            "en": "Okinawa"
+          }
+        }
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "celsiusTemperature": {
+        "type": "number"
+      }
+    }
+  },
+  "osType":"none",
+  "categoryIds": ["cat_0007"]
+}

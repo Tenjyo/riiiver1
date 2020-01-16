@@ -1,0 +1,10 @@
+{
+    "serviceProxy": "pieceCore_Sample",
+    "properties": {
+        "preferences": {
+            "cityName": "Tokyo"
+        },
+        "parameters": {},
+        "input": {}
+    }
+}
