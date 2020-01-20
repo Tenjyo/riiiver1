@@ -5,11 +5,11 @@ exports.handler = async event => {
 
   const apiHost = "https://api.openweathermap.org";
   const apiPath = "/data/2.5/weather";
-  const apikey = "98d2xxxxxxxxxxxxxxxxxxxxxxxxxc";    // ←ここに皆さんのAPI Keyを入れる
+  const apikey = "577b5b00a950095370238aefbe4ad76f";    // ←ここに皆さんのAPI Keyを入れる
   let response = {
       status: 200,
       body: {
-          celsiusTemperature: -1.0
+          celsiusTemperature: -2.0
       }
   };
 
